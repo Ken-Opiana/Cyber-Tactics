@@ -5,7 +5,8 @@
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "(Sigh) So much homework and activites, when will it ever end?"
+	  "text": "(Sigh) So much homework and activites, when will it ever end?",
+	  "voice": "Cutscene1_Part1_Student.wav"
 	}
   ]
 }

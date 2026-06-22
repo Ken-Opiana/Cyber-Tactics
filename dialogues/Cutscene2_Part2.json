@@ -5,56 +5,64 @@
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "You're not imagining things. You've been pulled inside your own computer's cyberspace."
+	  "text": "You're not imagining things. You've been pulled inside your own computer's cyberspace.",
+	  "voice": "Cutscene2_Part2_Kortica1.wav"
 	},
 	{
 	  "speaker": "Student",
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "What?! How's that even possible?"
+	  "text": "What?! How's that even possible?",
+	  "voice": "Cutscene2_Part2_Student1.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Warning",
-	  "text": "I checked your activity logs. It looks like you clicked on a suspicious link and downloaded a file without verifying it."
+	  "text": "I checked your activity logs. It looks like you clicked on a suspicious link and downloaded a file without verifying it.",
+	  "voice": "Cutscene2_Part2_Kortica2.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "Based on internet search archives I've accessed, that's the same behavior that leads to real-world infections-viruses, malware, even trojans spreading from shady downloads. In your case, that reckless click created a gateway... and it dragged you inside."
+	  "text": "Based on internet search archives I've accessed, that's the same behavior that leads to real-world infections-viruses, malware, even trojans spreading from shady downloads. In your case, that reckless click created a gateway... and it dragged you inside.",
+	  "voice": "Cutscene2_Part2_Kortica3.wav"
 	},
 	{
 	  "speaker": "Student",
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "So... I'm stuck here because I was careless?"
+	  "text": "So... I'm stuck here because I was careless?",
+	  "voice": "Cutscene2_Part2_Student2.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "Exactly. Many people outside get tricked the same way. You just paid the price more directly."
+	  "text": "Exactly. Many people outside get tricked the same way. You just paid the price more directly.",
+	  "voice": "Cutscene2_Part2_Kortica4.wav"
 	},
 	{
 	  "speaker": "Student",
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Alright... if this place is infected, what kind of dangers are in here?"
+	  "text": "Alright... if this place is infected, what kind of dangers are in here?",
+	  "voice": "Cutscene2_Part2_Student3.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "Good question. Again, let me reference some common cases from the internet:"
+	  "text": "Good question. Again, let me reference some common cases from the internet:",
+	  "voice": "Cutscene2_Part2_Kortica5.wav"
 	},
 	{
 	  "speaker": "Kortica",
@@ -62,7 +70,8 @@
 	  "model": "cortana_model",
 	  "anim": "Idle",
 	  "image": "worm_shadow",
-	  "text": "Worms - I found reports of them spreading endlessly through networks. They act fast, multiplying until the system crashes."
+	  "text": "Worms - I found reports of them spreading endlessly through networks. They act fast, multiplying until the system crashes.",
+	  "voice": "Cutscene2_Part2_Kortica6.wav"
 	},
 	{
 	  "speaker": "Kortica",
@@ -70,7 +79,8 @@
 	  "model": "cortana_model",
 	  "anim": "Idle",
 	  "image": "virus_shadow",
-	  "text": "Virus - Search results show countless cases where it sabotages files, steals, data, or slows everything down."
+	  "text": "Virus - Search results show countless cases where it sabotages files, steals, data, or slows everything down.",
+	  "voice": "Cutscene2_Part2_Kortica7.wav"
 	},
 	{
 	  "speaker": "Kortica",
@@ -78,7 +88,8 @@
 	  "model": "cortana_model",
 	  "anim": "Idle",
 	  "image": "trojan_shadow",
-	  "text": "Trojans - They appear safe, but articles describe how they trick people, then secretly unleash other threats."
+	  "text": "Trojans - They appear safe, but articles describe how they trick people, then secretly unleash other threats.",
+	  "voice": "Cutscene2_Part2_Kortica8.wav"
 	},
 	{
 	  "speaker": "Kortica",
@@ -86,28 +97,32 @@
 	  "model": "cortana_model",
 	  "anim": "Idle",
 	  "image": "ransom_shadow",
-	  "text": "Ransomware - Real cases show how they exploit weaknesses, just like intruders breaking into unlocked houses."
+	  "text": "Ransomware - Real cases show how they exploit weaknesses, just like intruders breaking into unlocked houses.",
+	  "voice": "Cutscene2_Part2_Kortica9.wav"
 	},
 	{
 	  "speaker": "Student",
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "So all of those could be crawling around my PC right now?"
+	  "text": "So all of those could be crawling around my PC right now?",
+	  "voice": "Cutscene2_Part2_Student4.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "The same way you would protect your real computer:"
+	  "text": "The same way you would protect your real computer:",
+	  "voice": "Cutscene2_Part2_Kortica10.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "Use antivirus software to detect and remove threats. Build firewalls to block suspicious traffic. Add multi-factor authentication to keep intruders out. And secure everything with encryption, so even if attackers get in, your data is unreadable."
+	  "text": "Use antivirus software to detect and remove threats. Build firewalls to block suspicious traffic. Add multi-factor authentication to keep intruders out. And secure everything with encryption, so even if attackers get in, your data is unreadable.",
+	  "voice": "Cutscene2_Part2_Kortica11.wav"
 	}
   ]
 }

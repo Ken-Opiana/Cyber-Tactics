@@ -5,7 +5,8 @@
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Ughh, another update? What's with the school lately? I have just updated my account."
+	  "text": "Ughh, another update? What's with the school lately? I have just updated my account.",
+	  "voice": "Cutscene1_Part3_Student.wav"
 	}
   ]
 }

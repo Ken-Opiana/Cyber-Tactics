@@ -51,6 +51,20 @@ var _typing: bool = false
 @export var enable_speech_sfx: bool = true
 var _sfx_player: AudioStreamPlayer = null
 
+# ---------------- Voice-over config ----------------
+# Each dialogue line may carry a "voice" field. If it's a bare filename
+# (e.g. "Cutscene1_Part1_Student.wav") it's resolved against voice_dir below.
+# If it already starts with res:// or user:// it's used as an absolute path.
+@export var enable_voice_over: bool = true
+@export_dir var voice_dir: String = "res://art/voice_overs/"   # folder holding the VO .wav files
+@export var voice_bus: String = "SFX"                          # audio bus used for voice-over
+@export_range(-40.0, 6.0, 0.5) var voice_volume_db: float = 0.0
+# When true, the typewriter speech blips are silenced on lines that have a voice-over,
+# so the spoken line and the blips don't clash.
+@export var mute_typewriter_sfx_on_voiced_lines: bool = true
+var _vo_player: AudioStreamPlayer = null
+var _current_line_has_voice: bool = false
+
 func _ready() -> void:
 	# Hide/show the entire DialogueUI root instead of individual children.
 	# Set this Control invisible initially.
@@ -72,6 +86,8 @@ func show_block_immediately() -> void:
 	# Show the whole UI root (so BlackBlock is visible)
 	visible = true
 	_clear_current_model()
+	# Stop any voice-over left over from a previous dialogue.
+	_stop_voice()
 	# Make sure TransparentBlock is visible immediately
 	if transparent_block:
 		transparent_block.visible = true
@@ -118,6 +134,9 @@ func _show_current_line() -> void:
 		return
 
 	var line: Dictionary = _lines[_index] as Dictionary
+
+	# 0) Voice-over: start (or clear) audio for this line before anything else.
+	_play_voice_for_line(line)
 
 	# 1) Speaker name
 	if name_label:
@@ -176,8 +195,9 @@ func _start_typing_bbcode(full_bbcode_text: String) -> void:
 			break
 		dialogue_label.visible_characters = i
 
-		# play speech blip every sfx_interval visible characters, skipping whitespace
-		if enable_speech_sfx and speech_sfx and sfx_interval > 0 and (i % sfx_interval) == 0:
+		# play speech blip every sfx_interval visible characters, skipping whitespace.
+		# Skipped entirely when this line has a voice-over (so VO and blips don't clash).
+		if enable_speech_sfx and speech_sfx and sfx_interval > 0 and (i % sfx_interval) == 0 and not (_current_line_has_voice and mute_typewriter_sfx_on_voiced_lines):
 			# plain_text index is i-1
 			if i - 1 < plain_text.length():
 				var ch: String = plain_text[i - 1]
@@ -248,6 +268,7 @@ func force_hide_block() -> void:
 # Ensure UI is fully hidden/unblocked and emit finished
 func _emit_finished() -> void:
 	visible = false
+	_stop_voice()
 	force_hide_block()
 	_write_debug("DialogueUI: finished dialogue emitted")
 	emit_signal("dialogue_finished")
@@ -553,6 +574,64 @@ func _play_speech_sfx() -> void:
 	_sfx_player.stop()
 	_sfx_player.pitch_scale = 1.0 + randf_range(-sfx_random_pitch, sfx_random_pitch)
 	_sfx_player.play()
+
+# ---------------- Voice-over helpers ----------------
+func _ensure_vo_player() -> void:
+	if _vo_player != null:
+		return
+	_vo_player = AudioStreamPlayer.new()
+	_vo_player.name = "VoiceOverPlayer"
+	add_child(_vo_player)
+	_vo_player.bus = voice_bus
+	_vo_player.volume_db = voice_volume_db
+	_vo_player.autoplay = false
+	# Play even if the SceneTree is paused, matching the pause-agnostic typewriter timer.
+	_vo_player.process_mode = Node.PROCESS_MODE_ALWAYS
+
+func _stop_voice() -> void:
+	if _vo_player and _vo_player.playing:
+		_vo_player.stop()
+
+# Resolve a line's "voice" value into a loadable resource path.
+# Bare filenames are joined onto voice_dir; res:// or user:// paths are used as-is.
+func _resolve_voice_path(voice_value: String) -> String:
+	if voice_value == null:
+		return ""
+	var v: String = voice_value.strip_edges()
+	if v == "":
+		return ""
+	if v.begins_with("res://") or v.begins_with("user://"):
+		return v
+	var base: String = voice_dir
+	if not base.ends_with("/"):
+		base += "/"
+	return base + v
+
+# Stop any current voice-over and, if this line has one, load and play it.
+func _play_voice_for_line(line: Dictionary) -> void:
+	_current_line_has_voice = false
+	_stop_voice()
+	if not enable_voice_over:
+		return
+	var voice_value: String = str(line.get("voice", ""))
+	var path: String = _resolve_voice_path(voice_value)
+	if path == "":
+		return
+	if not ResourceLoader.exists(path):
+		_write_debug("DialogueUI: voice file MISSING: %s" % path)
+		return
+	var stream: Resource = ResourceLoader.load(path)
+	if stream == null or not (stream is AudioStream):
+		_write_debug("DialogueUI: voice load failed / not AudioStream: %s" % path)
+		return
+	_ensure_vo_player()
+	# keep volume/bus current in case they were changed in the Inspector
+	_vo_player.bus = voice_bus
+	_vo_player.volume_db = voice_volume_db
+	_vo_player.stream = stream as AudioStream
+	_vo_player.play()
+	_current_line_has_voice = true
+	_write_debug("DialogueUI: voice playing: %s" % path)
 
 func _strip_bbcode(bb: String) -> String:
 	if bb == null or bb == "":

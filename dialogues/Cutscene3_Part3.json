@@ -5,7 +5,8 @@
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Not really... but I guess I don't have much of a choice. Let's do this."
+	  "text": "Not really... but I guess I don't have much of a choice. Let's do this.",
+	  "voice": "Cutscene3_Part3_Student.wav"
 	}
   ]
 }

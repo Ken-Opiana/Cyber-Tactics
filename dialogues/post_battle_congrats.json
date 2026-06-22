@@ -5,35 +5,40 @@
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Whew!"
+	  "text": "Whew!",
+	  "voice": "post_battle_congrats_student1.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Happy",
-	  "text": "Well done. You have survived an battle, but we must navigate to terminate the source of the infection."
+	  "text": "Well done. You have survived an battle, but we must navigate to terminate the source of the infection.",
+	  "voice": "post_battle_congrats_kortica1.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "It is located at the top of the map."
+	  "text": "It is located at the top of the map.",
+	  "voice": "post_battle_congrats_kortica2.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Happy",
-	  "text": "I will assist you through here."
+	  "text": "I will assist you through here.",
+	  "voice": "post_battle_congrats_kortica3.wav"
 	},
 	{
 	  "speaker": "Student",
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Alright... I'll do my best!"
+	  "text": "Alright... I'll do my best!",
+	  "voice": "post_battle_congrats_student2.wav"
 	}
   ]
 }

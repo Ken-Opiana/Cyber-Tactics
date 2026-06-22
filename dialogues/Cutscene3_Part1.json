@@ -5,14 +5,16 @@
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "So... basically, I'll need to learn how to defend myself just like protecting a real PC?"
+	  "text": "So... basically, I'll need to learn how to defend myself just like protecting a real PC?",
+	  "voice": "Cutscene3_Part1_Student.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Happy",
-	  "text": "Correct. Think of this as practice. Every move you make here is a lesson you can apply outsi-"
+	  "text": "Correct. Think of this as practice. Every move you make here is a lesson you can apply outsi-",
+	  "voice": "Cutscene3_Part1_Kortica.wav"
 	}
   ]
 }

@@ -5,7 +5,8 @@
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Huh? An email? From the school, I hope classes are cancelled."
+	  "text": "Huh? An email? From the school, I hope classes are cancelled.",
+	  "voice": "Cutscene1_Part2_Student.wav"
 	}
   ]
 }

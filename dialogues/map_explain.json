@@ -5,35 +5,40 @@
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Where are we?"
+	  "text": "Where are we?",
+	  "voice": "map_explain_student1.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "This is a node map. You can navigate it by using the scroll wheel."
+	  "text": "This is a node map. You can navigate it by using the scroll wheel.",
+	  "voice": "map_explain_kortica1.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "Navigate the node by clicking on the nodes that are availabale."
+	  "text": "Navigate the node by clicking on the nodes that are availabale.",
+	  "voice": "map_explain_kortica2.wav"
 	},
 	{
 	  "speaker": "Kortica",
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Idle",
-	  "text": "Once we entered that node. We cannot go back the previous node."
+	  "text": "Once we entered that node. We cannot go back the previous node.",
+	  "voice": "map_explain_kortica3.wav"
 	},
 	{
 	  "speaker": "Student",
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Ok! I'll choose wisely."
+	  "text": "Ok! I'll choose wisely.",
+	  "voice": "map_explain_student2.wav"
 	}
   ]
 }

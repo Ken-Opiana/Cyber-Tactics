@@ -5,7 +5,8 @@
 	  "portrait": "student",
 	  "model": "student_model",
 	  "anim": "Idle",
-	  "text": "Ugh... my head... Where am I? This doesn't look like my room or my PC screen."
+	  "text": "Ugh... my head... Where am I? This doesn't look like my room or my PC screen.",
+	  "voice": "Cutscene2_Part1_Student.wav"
 	}
   ]
 }

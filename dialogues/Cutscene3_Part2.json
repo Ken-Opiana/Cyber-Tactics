@@ -5,7 +5,8 @@
 	  "portrait": "cortana",
 	  "model": "cortana_model",
 	  "anim": "Danger",
-	  "text": "Ready to begin?"
+	  "text": "Ready to begin?",
+	  "voice": "Cutscene3_Part2_Kortica.wav"
 	}
   ]
 }
