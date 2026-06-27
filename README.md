@@ -9,7 +9,7 @@ Fight your way through encrypted corridors, build a deck of security tactics, an
 [![Made with Godot](https://img.shields.io/badge/Made%20with-Godot%204.6-478CBF?logo=godotengine&logoColor=white)](https://godotengine.org/)
 [![GDScript](https://img.shields.io/badge/GDScript-99.9%25-355570?logo=godotengine&logoColor=white)](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html)
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)](https://lil-iguana.itch.io/cyber-tactics)
-[![Status](https://img.shields.io/badge/Status-In%20Development-yellow)](https://lil-iguana.itch.io/cyber-tactics)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen)](https://lil-iguana.itch.io/cyber-tactics)
 [![Version](https://img.shields.io/badge/Version-1.0.1-blue)](https://github.com/Ken-Opiana/Cyber-Tactics)
 [![Play on itch.io](https://img.shields.io/badge/Play%20on-itch.io-FA5C5C?logo=itchdotio&logoColor=white)](https://lil-iguana.itch.io/cyber-tactics)
 
@@ -39,11 +39,9 @@ Fight your way through encrypted corridors, build a deck of security tactics, an
 - [Built With](#-built-with)
 - [Getting Started (Development)](#-getting-started-development)
 - [Project Structure](#-project-structure)
-- [Roadmap](#-roadmap)
 - [Feedback](#-feedback)
 - [AI Disclosure](#-ai-disclosure)
 - [Contributing](#-contributing)
-- [License](#-license)
 - [Credits](#-credits)
 
 ---
@@ -107,7 +105,7 @@ The latest build is available for **Windows** on itch.io:
 3. Open the extracted folder and double-click the game's **`.exe`** to launch.
 4. If **Windows SmartScreen** appears, click **More Info → Run Anyway**.
 
-> The game is in active development — builds are updated regularly. Check the itch.io page for the newest version.
+> The full game is available to download for free on the itch.io page.
 
 ---
 
@@ -200,23 +198,6 @@ The game is built around a set of global singletons defined in `global/`:
 
 ---
 
-## 🗺️ Roadmap
-
-Cyber Tactics is **in active development**. Content is built out chapter by chapter, expanding the story, card pool, enemies, and cybersecurity topics covered.
-
-- [x] Core card-battle combat loop
-- [x] Roguelite map with battle and event rooms
-- [x] Dialogue, cutscene, and Codex systems
-- [x] Chapter 1 content
-- [ ] Additional chapters and encounters
-- [ ] Expanded card and status effect pool
-- [ ] More cybersecurity Codex topics
-- [ ] Additional platforms
-
-*(Roadmap is indicative — feel free to update as the project evolves.)*
-
----
-
 ## 📝 Feedback
 
 Your feedback helps shape the game! If you've played Cyber Tactics, please consider filling out the feedback form:
@@ -244,14 +225,6 @@ Contributions, bug reports, and ideas are welcome!
 5. Open a Pull Request
 
 For larger changes, please open an issue first to discuss what you'd like to change.
-
----
-
-## 📄 License
-
-This project does not currently specify a license, which means default copyright applies and all rights are reserved by the author.
-
-If you'd like others to be able to use, modify, or build on this project, consider adding an open-source license (for example, [MIT](https://choosealicense.com/licenses/mit/)) by creating a `LICENSE` file in the repository root. See [choosealicense.com](https://choosealicense.com/) for guidance.
 
 ---
 
